@@ -1,0 +1,52 @@
+body{
+    background: url(Imagens/backgroundheroessaga.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+}
+.botao{
+    background: -webkit-linear-gradient(bottom, #46FFB9, #46FED7 80%);
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+}
+.pontuacao{
+    display: table-cell;
+    background-color: #5E5E5E;
+    padding: 10px;
+}
+.tabuleiro{
+    display: table-cell;
+}
+.mensagens{
+    display: table-cell;
+    width: 30%;
+    background-color: #5E5E5E;
+}
+table{
+    background-color: #8A8A8A;
+}
+td{
+    padding: 2px
+}
+td:active{
+    border: 1px solid black;
+    border-radius: 100%;
+}
+.container {
+width: 100vw;
+height: 100vh;
+background: transparent;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.box {
+width: 500px;
+height: 200px;
+background: #8A8A8A;
+border-radius: 5px;
+padding: 5px;
+}
