@@ -59,7 +59,7 @@ function SorteiaObjetivo3(){
 }
 function MostraObjetivo(){
     document.getElementById("objetivo").innerHTML="Objetivo: Pegar "+n+" "+peca;
-    document.getElementById("fotoobj").src="Imagens/"+peca+".png";
+    document.getElementById("fotoobj").src=peca+".png";
     document.getElementById("contador").innerHTML=contador+"/"+n;
     document.getElementById("tentativas").innerHTML="Tentativas: "+tentativas;
     if(contador>=n){
@@ -89,10 +89,10 @@ function MostraObjetivo(){
 }
 function MostraObjetivo2(){
     document.getElementById("objetivo1").innerHTML="Objetivo: Pegar "+n1+" "+peca1;
-    document.getElementById("fotoobj1").src="Imagens/"+peca1+".png";
+    document.getElementById("fotoobj1").src=peca1+".png";
     document.getElementById("contador1").innerHTML=contador1+"/"+n1;
     document.getElementById("objetivo2").innerHTML="Objetivo: Pegar "+n2+" "+peca2;
-    document.getElementById("fotoobj2").src="Imagens/"+peca2+".png";
+    document.getElementById("fotoobj2").src=peca2+".png";
     document.getElementById("contador2").innerHTML=contador2+"/"+n2;
     document.getElementById("tentativas").innerHTML="Tentativas: "+tentativas;
     if(contador1>=n1 && contador2>=n2){
@@ -122,13 +122,13 @@ function MostraObjetivo2(){
 }
 function MostraObjetivo3(){
     document.getElementById("objetivo1").innerHTML="Objetivo: Pegar "+n1+" "+peca1;
-    document.getElementById("fotoobj1").src="Imagens/"+peca1+".png";
+    document.getElementById("fotoobj1").src=peca1+".png";
     document.getElementById("contador1").innerHTML=contador1+"/"+n1;
     document.getElementById("objetivo2").innerHTML="Objetivo: Pegar "+n2+" "+peca2;
-    document.getElementById("fotoobj2").src="Imagens/"+peca2+".png";
+    document.getElementById("fotoobj2").src=peca2+".png";
     document.getElementById("contador2").innerHTML=contador2+"/"+n2;
     document.getElementById("objetivo3").innerHTML="Objetivo: Pegar "+n3+" "+peca3;
-    document.getElementById("fotoobj3").src="Imagens/"+peca3+".png";
+    document.getElementById("fotoobj3").src=peca3+".png";
     document.getElementById("contador3").innerHTML=contador3+"/"+n3;
     document.getElementById("tentativas").innerHTML="Tentativas: "+tentativas;
     if(contador1>=n1 && contador2>=n2 && contador3>=n3){
@@ -1343,7 +1343,7 @@ function GeraTabHTML(tab){
         tabuleiro.push('<tr>');
         for(i=0;i<10;i++){
             tabuleiro.push('<td onclick="posicoes.unshift(['+c+','+i+']);if(posicoes.length%2==0){Testa();}">');
-            tabuleiro.push('<img src="Imagens/'+tab[c][i]+'.png" style="width:65px;height:65px;">');
+            tabuleiro.push('<img src="'+tab[c][i]+'.png" style="width:65px;height:65px;">');
             tabuleiro.push('</td>');
         }
         tabuleiro.push('</tr>');
@@ -1356,7 +1356,7 @@ function GeraTabHTML2(tab){
         tabuleiro.push('<tr>');
         for(i=0;i<10;i++){
             tabuleiro.push('<td onclick="posicoes.unshift(['+c+','+i+']);if(posicoes.length%2==0){Testa2();}">');
-            tabuleiro.push('<img src="Imagens/'+tab[c][i]+'.png" style="width:65px;height:65px;">');
+            tabuleiro.push('<img src="'+tab[c][i]+'.png" style="width:65px;height:65px;">');
             tabuleiro.push('</td>');
         }
         tabuleiro.push('</tr>');
@@ -1369,7 +1369,7 @@ function GeraTabHTML3(tab){
         tabuleiro.push('<tr>');
         for(i=0;i<10;i++){
             tabuleiro.push('<td onclick="posicoes.unshift(['+c+','+i+']);if(posicoes.length%2==0){Testa3();}">');
-            tabuleiro.push('<img src="Imagens/'+tab[c][i]+'.png" style="width:65px;height:65px;">');
+            tabuleiro.push('<img src="'+tab[c][i]+'.png" style="width:65px;height:65px;">');
             tabuleiro.push('</td>');
         }
         tabuleiro.push('</tr>');
@@ -1381,7 +1381,7 @@ function Testa(){
         tab=Trocar(tab);
         audio=[
             '<audio id="player" autoplay="autoplay">',
-	           '<source src="Audios/'+aud+'.ogg" type="audio/ogg" />',
+	           '<source src="'+aud+'.ogg" type="audio/ogg" />',
 	       '</audio>'
         ]
         document.getElementById("audio").innerHTML=audio.join("\n");
@@ -1400,7 +1400,7 @@ function Testa2(){
         tab=Trocar(tab);
         audio=[
             '<audio id="player" autoplay="autoplay">',
-	           '<source src="Audios/'+aud+'.ogg" type="audio/ogg" />',
+	           '<source src="'+aud+'.ogg" type="audio/ogg" />',
 	       '</audio>'
         ]
         document.getElementById("audio").innerHTML=audio.join("\n");
@@ -1419,7 +1419,7 @@ function Testa3(){
         tab=Trocar(tab);
         audio=[
             '<audio id="player" autoplay="autoplay">',
-	           '<source src="Audios/'+aud+'.ogg" type="audio/ogg" />',
+	           '<source src="'+aud+'.ogg" type="audio/ogg" />',
 	       '</audio>'
         ]
         document.getElementById("audio").innerHTML=audio.join("\n");
